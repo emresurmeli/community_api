@@ -2,10 +2,8 @@ class User < ApplicationRecord
   # before_create :set_auth_token
   has_secure_password
 
-  # validates :username, length: { minimum: 4,
-  #   too_short: "Username must be at least 4 letters long" }, uniqueness: true
-  # validates :password, length: { minimum: 4,
-  #   too_short: "Password must be at least 4 letters long" }
+  validates :password, length: { minimum: 4,
+    too_short: "Password must be at least 4 letters long" }
   validates :email, presence: true
 
   private

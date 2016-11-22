@@ -1,1 +1,1 @@
-json.community @communities
+w@communities
