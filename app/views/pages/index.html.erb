@@ -1,3 +1,4 @@
+<h1>My Community</h1>
 <% if current_user %>
   You are logged in as <%= current_user.email %><br>
   <%= link_to 'Profile', communities_path %>
@@ -5,9 +6,4 @@
 <% else %>
   <%= link_to 'Log In', new_session_path %><br>
   <%= link_to 'Register', new_user_path %>
-<% end %>
-<% if session[:access_token] %>
-  <%= link_to 'Get User', "http://localhost:3000/api/user?access_token=#{session[:access_token]}" %>
-<% else %>
-  <%= link_to 'Authorize via Keepa', new_oauth_token_path %>
 <% end %>
